@@ -1,0 +1,55 @@
+<app-header></app-header>
+<div class="container-fluid">
+  <div class="row signup-view">
+    <div class="col-sm-6 offset-sm-3">
+      <div class="card signup-card">
+        <h5 class="card-header signup-header">SIGNUP</h5>
+        <div class="card-body">
+          <div class="container">
+            <form [formGroup]="registerForm" (ngSubmit)="signup()">
+              <div class="form-group">
+                <label>User Name</label>
+                <input type="text" formControlName="username" class="form-control" placeholder="Username" [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
+                <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                  <div *ngIf="f.username.errors.required">User Name is required</div>
+              </div>
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" formControlName="email" class="form-control" placeholder="Email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                  <div *ngIf="f.email.errors.required">Email is required</div>
+                  <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+              </div>
+              </div>
+              <div class="form-group">
+                <label>Password</label>
+                <input type="password" formControlName="password" class="form-control" placeholder="Password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                  <div *ngIf="f.password.errors.required">Password is required</div>
+                  <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+              </div>
+              </div>
+              <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="password" formControlName="confirmPassword" class="form-control" placeholder="Confirm Password" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }">
+                <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+                  <div *ngIf="f.confirmPassword.errors.required">Confirm Password is required</div>
+                  <div *ngIf="f.confirmPassword.errors.mustMatch">Passwords must match</div>
+              </div>
+              </div>
+              <div class="signupActBtn-wrapper">
+                <button  type="signup" class="btn btn-primary btn-float-right marRight-10 signupBtn">signup</button>
+                <button class="btn btn-secondary btn-float-right" type="reset" (click)="onReset()">Cancel</button>
+              </div>
+              
+              <span class="signup-text">Already a member?</span>&nbsp;
+              <a class="signup-text" routerLink="/login">Login</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

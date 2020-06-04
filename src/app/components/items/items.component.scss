@@ -1,0 +1,65 @@
+@import './../../../variables';
+.item-container{
+    margin-bottom: 5em;
+    .table-hover tbody tr:hover{
+        background-color: rgba(13, 56, 108, 0.03);
+    }
+    .actBtn {
+        border: 2px solid;
+        border-radius: 5px !important;
+        font-weight: 400;
+        padding: 0rem .75rem;
+    }
+    .btn-warning{
+        color: $edit-yellow;
+        background-color: white;
+        border-color: $edit-yellow;
+    }
+    .btn-warning:hover{
+        color: white;
+        background-color: $edit-yellow;
+    }
+    .btn-info{
+        color: $view-blue;
+        background-color: white;
+        border-color: $view-blue;
+    }
+    .btn-info:hover{
+        color: white;
+        background-color: #28196bc4;
+    }
+    .btn-danger{
+        color: $cancel-red;
+        background-color: white;
+        border-color: $cancel-red;
+    }
+    .btn-danger:hover{
+        color: white;
+        background-color: $cancel-red;
+    }
+}
+.btn {
+    border-radius: 0px;
+    font-weight: 300;
+}
+.add-item{
+    float: right;
+    background-color: $primary-blue;
+    border: 1px solid $primary-blue;
+}
+.add-item:hover{
+    background-color: white !important;
+    transition: .3s all ease;
+    color: $primary-blue;
+}
+.sign-out{
+    position: fixed;
+    bottom: 68px;
+    right: 9px;
+    z-index: 1;
+    .btn:hover{
+        color: $cancel-red !important;
+        background-color: white;
+        transition: .3s all ease;
+    }
+}

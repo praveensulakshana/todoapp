@@ -1,0 +1,40 @@
+@import './../../../variables';
+.card{
+    border: 1px solid $primary-blue;
+    border-radius: 0px;
+    .card-header{
+        background-color: $primary-blue;
+        color: white;
+    }
+    .card-header:first-child{
+        border-radius: 0px;
+    }
+}
+.item-view{
+    margin-bottom: 5em;
+}
+.btn {
+    border-radius: 0px !important;
+    font-weight: 300;
+}
+.backBtn{
+    float: right;
+    background-color: $primary-blue;
+    border: 1px solid $primary-blue;
+}
+.backBtn:hover{
+    background-color: white !important;
+    transition: .3s all ease;
+    color: $primary-blue;
+}
+.sign-out{
+    position: fixed;
+    bottom: 68px;
+    right: 9px;
+    z-index: 1;
+    .btn:hover{
+        color: $cancel-red !important;
+        background-color: white;
+        transition: .3s all ease;
+    }
+}

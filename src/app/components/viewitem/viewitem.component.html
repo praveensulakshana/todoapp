@@ -1,0 +1,26 @@
+<app-header></app-header>
+<div class="sign-out" routerLink="/login"><button type="button" class="btn btn-danger">Sign Out</button></div>
+<div class="row item-view">
+    <div class="col-sm-6 offset-sm-3">
+      <div class="card view-card">
+        <h5 class="card-header view-header">Product View</h5>
+        <div class="card-body">
+          <div class="container">
+            <form>
+              <div class="form-group">
+                <h3>Code : {{item.code}}</h3>
+              </div>
+              <div class="form-group">
+                <h3>Name : {{item.name}}</h3> 
+              </div>
+              <div class="form-group">
+                <h3>Quantity : {{item.qty}}</h3> 
+              </div>
+              <button routerLink="/itemdashboard" type="submit" class="btn btn-primary backBtn">To Products Page</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<app-footer></app-footer>

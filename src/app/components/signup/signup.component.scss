@@ -1,0 +1,47 @@
+@import './../../../variables';
+.card{
+    border: 1px solid $primary-blue;
+    border-radius: 0px;
+    .card-header{
+        background-color: $primary-blue;
+        color: white;
+    }
+    .card-header:first-child{
+        border-radius: 0px;
+    }
+    .signupBtn{
+        background-color: $primary-blue;
+        border: 1px solid $primary-blue;
+    }
+    .signupBtn:hover{
+        background-color: white;
+        color: $primary-blue;
+        border: 1px solid $primary-blue;
+        transition: .3s all ease;
+    }
+    .cancelBtn:hover{
+        background-color: white;
+        color: #6c757d;
+        border: 1px solid #6c757d;
+        transition: .3s all ease;
+    }
+    .signup-text{
+        font-size: 13px;
+    }
+}
+.btn {
+    border-radius: 0px !important;
+    font-weight: 300;
+}
+.signup-view{
+    margin-bottom: 5em;
+}
+.signupActBtn-wrapper{
+    text-align: right;
+    .btn-float-right{
+        display: inline-block;
+    }
+    .marRight-10{
+        margin-right: 10px;
+    }
+}

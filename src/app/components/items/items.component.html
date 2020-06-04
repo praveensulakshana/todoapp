@@ -1,0 +1,35 @@
+<app-header></app-header>
+<div class="container item-container">
+    <h2>Products <button (click)="addItem()" type="button" class="btn btn-primary add-item">Add Product</button></h2>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Product Code</th>
+          <th>Product Name</th>
+          <th>Product Quantity</th>
+          <th>Edit</th>
+          <th>View</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of commonService.items; let i=index">
+          <td>{{item.code}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.qty}}</td>
+          <td>
+            <button (click)="editItem(i)" type="button" class="btn btn-warning actBtn">Edit</button>
+          </td>
+          <td>
+            <button (click)="view(i)" type="button" class="btn btn-info actBtn">View</button>
+          </td>
+          <td>
+            <button (click)="delete(i)" type="button" class="btn btn-danger actBtn">Delete</button>
+          </td>
+  
+        </tr>
+      </tbody>
+    </table>
+</div>
+<div class="sign-out" routerLink="/login"><button type="button" class="btn btn-danger">Sign Out</button></div>
+<app-footer></app-footer>
